@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Alcubilla - Tu salud es nuestra prioridad</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente de Google para mejor tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💊</text></svg>">
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/34622892000?text=Hola,%20buenos%20días.%20Me%20contacto%20desde%20la%20página%20web%20de%20la%20farmacia.%20Quisiera%20información%20sobre..." 
+       class="whatsapp-btn" 
+       target="_blank" 
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cabecera / Navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">Farmacia Alcubilla</h1>
+                <p class="logo-subtitle">Cuidando tu salud desde 2024</p>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                
+                <!-- Menú hamburguesa para móviles -->
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Portada / Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Bienvenidos a Farmacia Alcubilla</h2>
+                    <p class="hero-text">
+                        Su farmacia de confianza en Alcubilla de Avellaneda. Nos dedicamos a cuidar de su salud y bienestar con profesionalidad, atención personalizada y los mejores productos farmacéuticos y dermocosméticos.
+                    </p>
+                    <p class="hero-text">
+                        Dirigida por <strong>Doris Yamileth Vallecillo Avila</strong>, nuestro equipo está comprometido con ofrecerle asesoramiento experto y soluciones adaptadas a sus necesidades.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#productos" class="btn btn-primary">Ver productos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- La imagen de portada se establece en el CSS como background-image -->
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-subtitle">Lista de precios actualizada. Productos dermocosméticos y farmacéuticos de primeras marcas.</p>
+            
+            <!-- Campo de búsqueda -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar productos por código o descripción..." aria-label="Buscar productos">
+                    <button id="clearSearch" class="clear-search" aria-label="Limpiar búsqueda">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="search-help">Escribe en el campo para filtrar los productos. Puedes buscar por código o nombre del producto.</p>
+            </div>
+            
+            <!-- Tabla de productos (se convierte en tarjetas en móviles) -->
+            <div class="table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="code">Código <span class="sort-indicator"></span></th>
+                            <th data-sort="description" class="sortable active">Descripción <span class="sort-indicator">↓</span></th>
+                            <th data-sort="price" class="sortable">Precio (P.V.P.) <span class="sort-indicator"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody">
+                        <!-- Los productos se cargan mediante JavaScript -->
+                    </tbody>
+                </table>
+                
+                <!-- Vista de tarjetas para móviles -->
+                <div class="products-cards" id="productsCards">
+                    <!-- Las tarjetas se generan mediante JavaScript -->
+                </div>
+            </div>
+            
+            <div class="products-info">
+                <p><i class="fas fa-info-circle"></i> Precios vigentes. IVA incluido. Disponibilidad sujeta a stock.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Farmacia Alcubilla</h3>
+                    <p class="footer-text">
+                        Su salud y bienestar son nuestra principal preocupación. Visítenos y descubra un trato profesional y cercano.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/34622892000" class="social-link" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+34622892000" class="social-link" aria-label="Llamar por teléfono">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:info@farmacia-alcubilla.es" class="social-link" aria-label="Enviar email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Información de contacto</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-user-md contact-icon"></i>
+                            <span><strong>Titular:</strong> DORIS YAMILETH VALLECILLO AVILA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span><strong>Dirección:</strong> Carretera ATAUTA, 26, 42351 Alcubilla de Avellaneda</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span><strong>Teléfono:</strong> <a href="tel:+34622892000">+34 622 892 000</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Horario de apertura</h4>
+                    <ul class="schedule-list">
+                        <li><span class="day">Lunes a Viernes:</span> <span class="hours">9:00 - 14:00 y 17:00 - 20:00</span></li>
+                        <li><span class="day">Sábados:</span> <span class="hours">9:00 - 14:00</span></li>
+                        <li><span class="day">Domingos:</span> <span class="hours">Cerrado</span></li>
+                        <li class="schedule-note"><i class="fas fa-exclamation-circle"></i> Horario sujeto a cambios en festivos</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Cómo llegar</h4>
+                    <div class="map-container">
+                        <!-- Enlace a Google Maps con la dirección -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=Carretera+ATAUTA,+26,+42351+Alcubilla+de+Avellaneda" 
+                           target="_blank" 
+                           class="map-link">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt map-icon"></i>
+                                <p>Ver en Google Maps</p>
+                                <p class="map-address">Carretera ATAUTA, 26<br>42351 Alcubilla de Avellaneda</p>
+                            </div>
+                        </a>
+                        <p class="map-instruction">Haz clic para obtener indicaciones</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Farmacia Alcubilla. Todos los derechos reservados.</p>
+                <p class="legal">Farmacia inscrita en el Colegio Oficial de Farmacéuticos. Nº de registro: En trámite.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
